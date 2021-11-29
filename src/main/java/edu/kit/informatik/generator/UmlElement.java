@@ -1,5 +1,6 @@
 package edu.kit.informatik.generator;
 
+import edu.kit.informatik.generator.dialect.Connection;
 import edu.kit.informatik.generator.dialect.ElementSettings;
 
 import java.util.HashSet;
@@ -17,8 +18,8 @@ public class UmlElement {
         connections = new HashSet<>();
     }
 
-    public void addConnection() {
-
+    public void addConnection(Connection connection, UmlElement to) {
+        connections.add()
     }
 
     private String generateSignature() {
