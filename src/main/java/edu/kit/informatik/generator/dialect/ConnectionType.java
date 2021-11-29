@@ -1,6 +1,6 @@
 package edu.kit.informatik.generator.dialect;
 
-public enum Connection {
+public enum ConnectionType {
 
     LINKED("<..>"),
     AGGREGATION("o--"),
@@ -11,7 +11,7 @@ public enum Connection {
 
     private String symbol;
 
-    Connection(String symbol) {
+    ConnectionType(String symbol) {
         this.symbol = symbol;
     }
 
