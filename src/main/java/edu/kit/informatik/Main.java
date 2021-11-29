@@ -1,5 +1,7 @@
 package edu.kit.informatik;
 
+import edu.kit.informatik.file.ProjectScraper;
+
 /**
  * The entry point for the application
  *
@@ -8,7 +10,10 @@ package edu.kit.informatik;
  */
 public final class Main {
 
-    public static void main(String[] args) {
+    private static final String targetDirectory = "/Users/thomas/Documents/Projekte/PSE/pse-prototype/src";
 
+    public static void main(String[] args) {
+        ProjectScraper scraper = new ProjectScraper(targetDirectory);
+        scraper.getProjectFiles();
     }
 }
