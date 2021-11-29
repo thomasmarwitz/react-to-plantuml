@@ -15,4 +15,16 @@ public enum ElementSettings {
         this.sign = sign;
         this.color = color;
     }
+
+    public String getType() {
+        return type;
+    }
+
+    public String getSign() {
+        return sign;
+    }
+
+    public String getColor() {
+        return color;
+    }
 }
