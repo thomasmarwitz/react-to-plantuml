@@ -14,7 +14,7 @@ public class ProjectScraper {
 
     private final File targetDir;
     private final String[] extensions;
-    private String srcProjectPath;
+    private final String srcProjectPath;
 
     /**
      * Instantiates a new Project scraper.
@@ -22,7 +22,7 @@ public class ProjectScraper {
      * @param srcProjectPath the src project path
      */
     public ProjectScraper(String srcProjectPath) {
-        this(srcProjectPath, new String[] {"js", "jsx", "ts", "tsx"});
+        this(srcProjectPath, new String[] {"js", "jsx", "ts", "tsx"}); // default react files
     }
 
     public ProjectScraper(String srcProjectPath, String[] extensions) {
