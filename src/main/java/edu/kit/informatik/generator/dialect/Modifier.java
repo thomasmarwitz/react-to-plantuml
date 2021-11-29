@@ -1,4 +1,4 @@
-package edu.kit.informatik.generator;
+package edu.kit.informatik.generator.dialect;
 
 public enum Modifier {
     METHOD("+", "==method=="),
