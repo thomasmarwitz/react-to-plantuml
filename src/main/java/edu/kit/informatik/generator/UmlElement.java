@@ -17,6 +17,10 @@ public class UmlElement {
         connections = new HashSet<>();
     }
 
+    public void addConnection() {
+
+    }
+
     private String generateSignature() {
         return String.format(
                 "class %s << (%s,%s) %s>>",
