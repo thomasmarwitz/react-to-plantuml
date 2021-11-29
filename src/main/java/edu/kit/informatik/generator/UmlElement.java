@@ -20,7 +20,7 @@ public class UmlElement {
         connections = new HashSet<>();
     }
 
-    public void addItem(Modifier modifier, String ) { // modifier characterizes element
+    public void addAttribute(Attribute attribute) { // modifier characterizes element
 
     }
 
