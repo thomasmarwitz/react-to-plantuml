@@ -14,6 +14,6 @@ public final class Main {
 
     public static void main(String[] args) {
         ProjectScraper scraper = new ProjectScraper(targetDirectory);
-        scraper.getProjectFiles();
+        scraper.getProjectFiles(true).forEach(System.out::println);
     }
 }

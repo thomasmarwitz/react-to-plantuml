@@ -3,6 +3,7 @@ package edu.kit.informatik.file;
 import org.apache.commons.io.FileUtils;
 import java.io.File;
 import java.util.Collection;
+import java.util.stream.Collectors;
 
 /**
  * Recursively searchs a target dir for files with given extensions.
@@ -11,6 +12,8 @@ import java.util.Collection;
  * @version 1.0
  */
 public class ProjectScraper {
+
+    private static final String JEST_TEST_FILE = ".test.";
 
     private final File targetDir;
     private final String[] extensions;
@@ -34,9 +37,15 @@ public class ProjectScraper {
     /**
      * Perform a recursive search an list all components in directory.
      */
-    public void getProjectFiles() {
+    public Collection<File> getProjectFiles(boolean excludeTestFiles) {
         Collection<File> result = FileUtils.listFiles(targetDir, extensions, true);
-        result.forEach(System.out::println);
+        //result.forEach(System.out::println);
+        if (excludeTestFiles) {
+            result = result.stream()
+                    .filter((file -> !file.getName().contains(JEST_TEST_FILE))) // has .test. in name if a test comp.
+                    .collect(Collectors.toList());
+        }
+        return result;
     }
 
     /**
